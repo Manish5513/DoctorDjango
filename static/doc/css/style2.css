@@ -1,0 +1,52 @@
+@font-face {
+    font-family: 'icomoon';
+    src:  url('fonts/icomoon.eot?9w18vp');
+    src:  url('fonts/icomoon.eot?9w18vp#iefix') format('embedded-opentype'),
+      url('fonts/icomoon.ttf?9w18vp') format('truetype'),
+      url('fonts/icomoon.woff?9w18vp') format('woff'),
+      url('fonts/icomoon.svg?9w18vp#icomoon') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: block;
+  }
+  
+  [class^="icon-"], [class*=" icon-"] {
+    /* use !important to prevent issues with browser extensions that change fonts */
+    font-family: 'icomoon' !important;
+    speak: never;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+  
+    /* Better Font Rendering =========== */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  
+  .icon-iconfinder_49_3678412:before {
+    content: "\e900";
+  }
+  .icon-iconfinder_certificate-guarantee-award-document-assurance_3209368:before {
+    content: "\e901";
+  }
+  .icon-iconfinder_virus-23_5862611:before {
+    content: "\e902";
+  }
+  .icon-iconfinder_genius_2639821:before {
+    content: "\e903";
+  }
+  .icon-iconfinder_Tilda_Icons_1ed_phone_3586359:before {
+    content: "\e904";
+  }
+  .icon-iconfinder_Location_4200779:before {
+    content: "\e905";
+  }
+  .icon-iconfinder_mail_115714:before {
+    content: "\e906";
+  }
+  .icon-iconfinder_9_375256:before {
+    content: "\e900";
+    
+  }

@@ -1,0 +1,47 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+{% block title %} Appointment {% endblock %}
+
+  <!-- ***** Breadcrumb Area Start ***** -->
+  <div class="breadcumb-area bg-img bg-gradient-overlay" style="background-image: url({% static 'website/img/bg-img/12.jpg' %});">
+    <div class="container h-100">
+      <div class="row h-100 align-items-center">
+        <div class="col-12">
+          <h2 class="title">Appointment</h2>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="breadcumb--con">
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+          <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+              <li class="breadcrumb-item"><a href="#"><i class="fa fa-home"></i> Home</a></li>
+              <li class="breadcrumb-item active" aria-current="page">Appointment</li>
+            </ol>
+          </nav>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- ***** Breadcrumb Area End ***** -->
+
+<center><h1>REVIEW YOUR SUBMISSION:</h1><br>
+    <strong>Your Name:</strong>{{your_name}}<br>
+    <strong>Your Contact No:</strong>{{your_phone}}<br>
+    <strong>Your Email:</strong>{{your_email}}<br>
+    <strong>Your Address:</strong> {{your_address}}<br>
+    <strong>Your Time:</strong>{{your_scheldule}}<br>
+    <strong>Your Day:</strong>{{your_day}}<br>
+    <strong>Your Service:</strong>{{your_Service}}<br>
+    <strong>Your Message:</strong>{{your_message}}
+    <p>thank you for your submission we will contact you shortly.</p>
+    <h1>email sent!</h1>
+
+</h2></center>
+<br/><br/><br/>
+
+{% endblock %}

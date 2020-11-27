@@ -1,0 +1,142 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    
+    <!--Title-->
+    <title>{% block title %}DR.DOCTOR{% endblock %}</title>
+
+    <!--favicon-->
+    <link rel="icon" href="{% static 'doc/img/favicon/favicon1.ico' %}">
+
+    <!--Core stylesheet-->
+    <link rel="stylesheet" href="{% static 'doc/css/style.css' %}">
+</head>
+<body>
+  <!--preloader-->
+  <header class="header-area">
+    <!-- Top Header Area -->
+    
+    <!-- Top Header End -->
+
+    <!-- Main Header Start -->
+    <div class="main-header-area">
+      <div class="classy-nav-container breakpoint-off">
+        <div class="container">
+          <!-- Classy Menu -->
+          <nav class="classy-navbar justify-content-between" id="dentoNav">
+
+            <!-- Logo -->
+            <a class="nav-brand" href="contact.html"><img src="{% static 'doc/img/core-img/logo.png'%}" alt=""></a>
+
+            <!-- Navbar Toggler -->
+            <div class="classy-navbar-toggler">
+              <span class="navbarToggler"><span></span><span></span><span></span></span>
+            </div>
+
+            <!-- Menu -->
+            <div class="classy-menu">
+
+              <!-- Close Button -->
+              <div class="classycloseIcon">
+                <div class="cross-wrap"><span class="top"></span><span class="bottom"></span></div>
+              </div>
+
+              <!-- Nav Start -->
+              <div class="classynav">
+                <ul id="nav">
+                  <li><a href="{% url 'home' %}">Home</a></li>
+                  <li><a href="{% url 'pricing' %}">Pricing</a></li>
+                  <li><a href="{% url 'service' %}">service</a></li>
+                  <li><a href="./contact.html">Contact</a></li>
+                </ul>
+              </div>
+              <!-- Nav End -->
+            </div>
+
+            <!-- Booking Now Button -->
+            <a href="#app" class="btn dento-btn booking-btn">Booking Now</a>
+          </nav>
+        </div>
+      </div>
+    </div>
+  </header>
+  <!-- ***** Header Area End ***** -->
+{% block content %}
+
+{% endblock %}
+<!--footer area start-->
+  <!-- ***** Footer Area Start ***** -->
+  <footer class="footer-area bg-img bg-gradient-overlay" style="background-image: url({% static 'doc/img/bg-img/3.jpg' %});">
+    <div class="container">
+      <div class="row">
+        <!-- Single Footer Widget -->
+        <div class="col-12 col-sm-6 col-lg-4">
+          <div class="single-footer-widget">
+            <p>Etiam sutor risus, dapibus act elefend katen, lacinia sitamet denim. Mauris sagittis kansa interdum dignissim.</p>
+            <div class="footer-contact">
+              <p><i class="icon-iconfinder_Location_4200779"></i> Bimbisar Nagar,Goregaon(East),<br>Mumbai-400065</p>
+              <p><i class="icon-iconfinder_Tilda_Icons_1ed_phone_3586359"></i> 1234567890</p>
+              <p><i class="icon-iconfinder_mail_115714"></i> appoint4541@gmail.com</p>
+            </div>
+          </div>
+        </div>
+  
+        <!-- Single Footer Widget -->
+        <div class="col-12 col-sm-6 col-lg-4">
+          <div class="single-footer-widget">
+            <!-- Widget Title -->
+            <h5 class="widget-title"><center>Opening Hours</center></h5>
+  
+            <!-- Opening Hours -->
+            <ul class="opening-hours col-">
+              <li><span>Mon-Wed</span> <span>8.00-18.00</span></li>
+              <li><span>Thu-Fri</span> <span>8.00-17.00</span></li>
+              <li><span>Sat</span> <span>9.00-17.00</span></li>
+              <li><span>Sun</span> <span>10.00-17.00</span></li>
+              <li><span>Holiday</span> <span>Closed</span></li>
+            </ul>
+          </div>
+        </div>
+  
+        <!-- Single Footer Widget -->
+        <div class="single-footer-widget col-2 ">
+          
+            <!-- Widget Title -->
+            <h5 class="col-12 widget-title">Quick Link</h5>
+  
+            <!-- Quick Links Nav -->
+            <nav>
+              <ul class="quick-links">
+                <li><a href="{% url 'service' %}"><center>Service</center></a></li>
+                <li><a href="{% url 'contact' %}"><center>Contact</center></a></li>
+                <li><a href="{% url 'pricing' %}"><center>Pricing</center></a></li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+  
+        
+      </div>
+    </div>
+    
+  
+    
+  </footer>
+  <!-- ***** Footer Area End ***** -->
+  <!--bootstrapper js preloaded -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+  <!-- ******* All JS ******* -->
+   
+  <!--active js-->
+  <script src="{% static 'doc/js/active.js'%}"></script>
+  <script src="{% static 'doc/js/jquery.barfiller.js'%}"></script>
+  
+  
+  </body>
+  </html>

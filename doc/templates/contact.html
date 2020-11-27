@@ -1,0 +1,93 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+{% block title %} Contact
+{% endblock %}
+<body>
+   <!-- ***** Breadcrumb Area Start ***** -->
+   <div class="breadcumb-area bg-img bg-gradient-overlay" style="background-image: url({% static 'website/img/bg-img/12.jpg' %});">
+    <div class="container h-100">
+      <div class="row h-100 align-items-center">
+        <div class="col-12">
+          <h2 class="title">Contact</h2>
+        </div>
+      </div>
+    </div>
+  </div>
+ 
+  <!-- ***** Breadcrumb Area End ***** -->
+    <!-- ***** Contact Area Start ***** -->
+  {% if message_name %}
+  <center>
+    <h2>Thanks {{ message_name}}!</h2>
+    <p>we received your email.</p>
+    <h2>Please check your mail for further assistence.</h2>
+  </center>
+  <br/><br/><br/>
+{% else %} 
+<section class="dento-contact-area mt-50 mb-100">
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+        <div class="google-maps mb-100">
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3769.127441572808!2d72.8555614238374!3d19.14589799428633!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7b7b5e3333c5b%3A0x3587d3070bfa4672!2sBimbisar%20Nagar%2C%20Goregaon%2C%20Mumbai%2C%20Maharashtra%20400065!5e0!3m2!1sen!2sin!4v1595253496503!5m2!1sen!2sin"
+            allowfullscreen></iframe>
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <!-- Contact Information -->
+      <div class="col-12 col-md-4">
+        <div class="contact-information">
+          <h5>Address</h5>
+          <p>Bimbisar Nagar,Goregaon,Mumbai-400065</p>
+
+          <h5>Phone</h5>
+          <p>1234567890</p>
+
+          
+          <h5>Email</h5>
+          <p class="mb-0">appoint4541@gmail.com</p>
+        </div>
+      </div>
+
+      <!-- Contact Form -->
+      <div class="col-12 col-md-8">
+        <div class="contact-form">
+          <!-- Section Heading -->
+          <div class="section-heading">
+            <h2>Get In Touch - {{ message_name }}</h2>
+            <div class="line"></div>
+          </div>
+          <!-- Form -->
+          <form action="{% url 'contact' %}" method="post">
+            {% csrf_token %}
+            <div class="row">
+              <div class="col-lg-6">
+                <input type="text" name="message-name" class="form-control mb-30" placeholder="Your Name">
+              </div>
+              <div class="col-lg-6">
+                <input type="email" name="message-email" class="form-control mb-30" placeholder="Your Email">
+              </div>
+              <div class="col-lg-6">
+                <input type="tel" name="message-phone" class="form-control mb-30" placeholder="1234567890">
+              </div>
+              <div class="col-12">
+                <textarea name="message" class="form-control mb-30" placeholder="Your Message"></textarea>
+              </div>
+              <div class="col-12">
+                <button type="submit" class="btn dento-btn">Send Message</button>
+              </div>
+            </div>
+          </form>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+{% endif %}
+<!-- ***** Contact Area End ***** -->
+</body>
+{% endblock %}
